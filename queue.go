@@ -58,8 +58,7 @@ func (q *Queue) Len() int {
 	return q.list.Len()
 }
 
-// clear
-func (q *Queue) Init() {
+func (q *Queue) Clear() {
 	q.lock.Lock()
 	q.list.Init()
 	q.lock.Unlock()

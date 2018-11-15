@@ -42,7 +42,7 @@ func main() {
 	q.PushBack(1, 2, 3)
 	fmt.Println("len3:", q.Len())
 	q.PushFront(4, 5, 6)
-	q.Init()
+	q.Clear()
 	fmt.Println("len4:", q.Len())
 }
 ```
