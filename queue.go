@@ -16,29 +16,17 @@ type Queue struct {
 	lock sync.Mutex
 }
 
-func (q *Queue) PushBack(v interface{}) {
+func (q *Queue) PushBack(item ...interface{}) {
 	q.lock.Lock()
-	q.list.PushBack(v)
-	q.lock.Unlock()
-}
-
-func (q *Queue) PushFront(v interface{}) {
-	q.lock.Lock()
-	q.list.PushFront(v)
-	q.lock.Unlock()
-}
-
-func (q *Queue) PushBackList(vList []interface{}) {
-	q.lock.Lock()
-	for _, v := range vList {
+	for _, v := range item {
 		q.list.PushBack(v)
 	}
 	q.lock.Unlock()
 }
 
-func (q *Queue) PushFrontList(vList []interface{}) {
+func (q *Queue) PushFront(item ...interface{}) {
 	q.lock.Lock()
-	for _, v := range vList {
+	for _, v := range item {
 		q.list.PushFront(v)
 	}
 	q.lock.Unlock()

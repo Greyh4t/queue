@@ -39,13 +39,10 @@ func main() {
 	}
 	fmt.Println("len2:", q.Len())
 
-	q.PushBackList([]interface{}{"a", "b", "c"})
+	q.PushBack(1, 2, 3)
 	fmt.Println("len3:", q.Len())
-
-	q.PushFrontList([]interface{}{"d", "e", "f"})
-	fmt.Println("len4:", q.Len())
-
+	q.PushFront(4, 5, 6)
 	q.Init()
-	fmt.Println("len5:", q.Len())
+	fmt.Println("len4:", q.Len())
 }
 ```
