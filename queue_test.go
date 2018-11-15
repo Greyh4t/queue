@@ -24,10 +24,10 @@ func BenchmarkBack(t *testing.B) {
 	q.Back()
 }
 
-func BenchmarkMutlPushFront(t *testing.B) {
+func BenchmarkMultPushFront(t *testing.B) {
 	q.PushFront(ti, ts, ti, ts, ti, ts, ti, ts, ti, ts)
 }
 
-func BenchmarkMutlPushBack(t *testing.B) {
+func BenchmarkMultPushBack(t *testing.B) {
 	q.PushBack(ti, ts, ti, ts, ti, ts, ti, ts, ti, ts)
 }
